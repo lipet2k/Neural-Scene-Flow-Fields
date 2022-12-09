@@ -1,0 +1,12 @@
+name: nerf-env
+
+dependencies:
+        - pytorch>=1.6
+        - configargparse
+        - matplotlib
+        - opencv
+        - scikit-image
+        - scipy
+        - cupy
+        - imageio
+        - tqdm
