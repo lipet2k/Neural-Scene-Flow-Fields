@@ -1,5 +1,7 @@
 name: nerf-env
-
+channels:
+- defaults
+- conda-forge
 dependencies:
         - pytorch>=1.6
         - configargparse
@@ -10,3 +12,4 @@ dependencies:
         - cupy
         - imageio
         - tqdm
+        - kornia
