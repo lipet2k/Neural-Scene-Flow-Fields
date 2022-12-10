@@ -1,4 +1,5 @@
-srun --partition=short --nodes=1 --cpus-per-task=1 --pty /bin/bash
+srun --partition=gpu --nodes=1 --pty --gres=gpu:1 --ntasks=1 --mem=8GB --time=01:00:00 /bin/bash
 module load anaconda3/2022.01
-module load cuda/11.4
+module load cuda/11.3
 conda env create -f environment.yml
+Remember to set datadir in config/config_kid-running.txt
