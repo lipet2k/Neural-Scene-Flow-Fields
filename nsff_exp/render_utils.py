@@ -8,6 +8,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from run_nerf_helpers import *
+from tempfile import TemporaryFile
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 DEBUG = False
@@ -85,6 +86,8 @@ def render_slowmo_bt(disps, render_poses, bt_poses,
                      hwf, chunk, render_kwargs, 
                      gt_imgs=None, savedir=None, 
                      render_factor=0, target_idx=10):
+    print("The displacements are of type:" + str(type(disps)))
+    np.save('../renders/slowmo_bt', disps)
     # import scipy.io
 
     H, W, focal = hwf
